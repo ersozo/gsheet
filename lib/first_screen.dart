@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'google_sheets_api.dart';
 import 'sheets_column.dart';
 
-class MyHome extends StatefulWidget {
-  const MyHome({Key? key}) : super(key: key);
+class First extends StatefulWidget {
+  const First({Key? key}) : super(key: key);
 
   @override
-  State<MyHome> createState() => _MyHomeState();
+  State<First> createState() => _FirstState();
 }
 
-class _MyHomeState extends State<MyHome> {
+class _FirstState extends State<First> {
   final List<TextEditingController> _myController =
       List.generate(2, (i) => TextEditingController());
 
@@ -24,11 +24,15 @@ class _MyHomeState extends State<MyHome> {
           children: [
             const SizedBox(
               height: 100.0,
-              child: Text('kkjklj'),
+              child: Text('--'
+                  // controller: _myController[0],
+                  ),
             ),
             const SizedBox(
               height: 100.0,
-              child: Text('lklkl'),
+              child: Text('--'
+                  // controller: _myController[1],
+                  ),
             ),
             GestureDetector(
               child: Container(

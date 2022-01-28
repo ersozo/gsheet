@@ -1,7 +1,9 @@
+import 'package:deneme/second_screen.dart';
 import 'package:flutter/material.dart';
 // import 'home.dart';
 import 'google_sheets_api.dart';
-import 'mainscreen.dart';
+import 'first_screen.dart';
+import 'second_screen.dart';
 
 void main() async {
   await GoogleSheetsApi().init();
@@ -16,8 +18,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: const MyHome(),
+      // theme: ThemeData.dark(),
+      home: Second(),
     );
   }
 }
