@@ -35,7 +35,8 @@ class GoogleSheetsApi {
       final firstRow = SheetsColumn.getColumns();
       _userSheet!.values.insertRow(1, firstRow);
     } catch (e) {
-      print(e);
+      // ignore: avoid_print
+      print('Init Error: $e');
     }
   }
 
@@ -50,7 +51,9 @@ class GoogleSheetsApi {
     }
   }
 
+  // insert a new row (basically row is a list of maps: keys of a Map are column names.)
   static Future insert(List<Map<String, dynamic>> rowList) async {
+    if (_userSheet == null) return;
     _userSheet!.values.map.appendRows(rowList);
   }
 }

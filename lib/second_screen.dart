@@ -3,7 +3,7 @@ import 'google_sheets_api.dart';
 import 'package:deneme/sheets_column.dart';
 
 class Second extends StatefulWidget {
-  Second({Key? key}) : super(key: key);
+  const Second({Key? key}) : super(key: key);
 
   @override
   State<Second> createState() => _SecondState();
